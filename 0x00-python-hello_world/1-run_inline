@@ -1,5 +1,2 @@
 #!/bin/bash
->>> width = 4
->>> lenght = 9
->>> area = width * lenght
->>> print('area')
+python3 -c $PYCODE
