@@ -1,4 +1,4 @@
-!/usr/bin/python3
-for a in range(ord('a'), ord('z') +1):
-    if chr(a) != 'e' and chr(a) != 'q':
-        print("{:c}".format(a), end='')
+#!/usr/bin/python3
+for char in range(26):
+    if char != 4 and char != 16:
+        print("{:s}".format(chr(char + ord("a"))), end="")
