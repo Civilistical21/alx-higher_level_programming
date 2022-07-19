@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 """Define classes for a singly-linked list."""
 
 
@@ -71,7 +70,7 @@ class SinglyLinkedList:
         """Define the print() representation of a SinglyLinkedList."""
         values = []
         tmp = self.__head
-while tmp is not None:
+        while tmp is not None:
             values.append(str(tmp.data))
             tmp = tmp.next_node
         return ('\n'.join(values))
