@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-
+"""
+    101-locked_class: class LockedClass
+"""
 class LockedClass:
-
-    def __setattr__(self, attr, value):
-
-        if attr != 'first_name':
-
-            raise AttributeError("'LockedClass' object has no attribute '{}'".format(attr))
-
-        self.__dict__.update({attr: value})
+    """
+        A class that can only have one attribute first_name.
+        Attribute:
+             first_name (str): name
+    """
+    __slots__ = ['first_name']
