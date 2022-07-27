@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-def magic_string(H=[]):
+def magic_string():
 
-    H += ["Holberton"]
+    setattr(magic_string, "n", getattr(magic_string, "n", 0) + 1)
 
-    return (", ".join(H))
+    return ("BestSchool, " * getattr(magic_string, "n", 0))[:-2]
