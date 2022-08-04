@@ -2,7 +2,7 @@
 
 """
 
-append after
+Module for append_after method.
 
 """
 
@@ -12,42 +12,26 @@ append after
 
 def append_after(filename="", search_string="", new_string=""):
 
-    """inserts a line of text to a file,
+    '''Method for inserting text after search string.'''
 
-    after each line containing a specific string
+    lines = []
 
-    Args:
+    with open(filename, "r", encoding="utf-8") as f:
 
-        filename (str): file name,
+        lines = f.readlines()
 
-        search_string (str): string that searching for
+        i = 0
 
-        new_string (str): new string
+        while i < len(lines):
 
-    Returns:
+            if search_string in lines[i]:
 
-        None
+                lines[i:i + 1] = [lines[i], new_string]
 
-    """
+                i += 1
 
-    with open(filename, 'r', encoding='utf-8') as f:
+            i += 1
 
-        lines = []
-
-        while True:
-
-            line = f.readline()
-
-            if line == "":
-
-                break
-
-            lines.append(line)
-
-            if search_string in line:
-
-                lines.append(new_string)
-
-    with open(filename, 'w', encoding='utf-8') as f:
+    with open(filename, "w", encoding="utf-8") as f:
 
         f.writelines(lines)

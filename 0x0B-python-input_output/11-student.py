@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 
-"""
-
-Define: Strudent Class
-
-"""
+'''Module for Student class.'''
 
 
 
@@ -12,35 +8,11 @@ Define: Strudent Class
 
 class Student:
 
-    """Represents a Rectangle
-
-    Attributes:
-
-        first_name (str): student first name
-
-        last_name (str): student last name
-
-        age (int): student age
-
-    """
-
-
+    '''Class for jsonification.'''
 
     def __init__(self, first_name, last_name, age):
 
-        """Initializes a rectangle
-
-        Args:
-
-        first_name (str): student first name
-
-        last_name (str): student last name
-
-        age (int): student age
-
-        Returns: None
-
-        """
+        '''Constructor.'''
 
         self.first_name = first_name
 
@@ -50,18 +22,24 @@ class Student:
 
 
 
-    def to_json(self):
+    def to_json(self, attrs=None):
 
-        """returns a dictionary representation of a Student instance
+        '''Retrieves dictionary with filter.'''
 
-        Args:
+        if type(attrs) is list and all([type(x) == str for x in attrs]):
 
-            None
+            return {k: v for k, v in self.__dict__.items() if k in attrs}
 
-        Returns:
+        else:
 
-            (Object) : dict
+            return self.__dict__.copy()
 
-        """
 
-        return self.__dict__
+
+    def reload_from_json(self, json):
+
+        '''Loads attributes from json.'''
+
+        for key, value in json.items():
+
+            self.__dict__[key] = value

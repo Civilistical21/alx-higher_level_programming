@@ -2,7 +2,7 @@
 
 """
 
-reads txt file
+Module for read_file method.
 
 """
 
@@ -12,18 +12,16 @@ reads txt file
 
 def read_file(filename=""):
 
-    """reads a text file (UTF8) and prints it
+    """
 
-    Args:
-
-        filename (str): file name
-
-    Returns:
-
-        None
+    Reads text file and prints to STDOUT
 
     """
 
-    with open(filename, "r", encoding="utf-8") as f:
 
-        print(f.read(), end="")
+
+    with open(filename, "r", encoding="UTF-8") as f:
+
+        for line in f:
+
+            print(line, end="")
