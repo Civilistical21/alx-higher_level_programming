@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-""" Check base classes
+''' module: 2-is_same_class
 
-"""
+'''
 
 
 
@@ -10,14 +10,14 @@
 
 def is_kind_of_class(obj, a_class):
 
-    """ Function to check if class is specific superclass
+    '''function: is_kind_of_class
 
-        Args:
+    obj: an object
 
-            obj: object to check
+    a_class: a class
 
-            a_class: class to check
+    Returns: Bool
 
-    """
+    '''
 
     return isinstance(obj, a_class)

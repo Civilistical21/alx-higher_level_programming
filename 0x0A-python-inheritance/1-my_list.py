@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-""" List module
+''' Module: 1-my_list
 
-"""
+'''
 
 
 
@@ -10,22 +10,18 @@
 
 class MyList(list):
 
-    """ List subclass
+    ''' Represents a MyList
 
-    """
+    '''
 
 
 
     def print_sorted(self):
 
-        """ List printing method
+        '''
 
-        """
+        prints the list, but sorted
 
-        if isinstance(self, list):
+        '''
 
-            res = self[:]
-
-            res.sort()
-
-            print(res)
+        print(sorted(self))

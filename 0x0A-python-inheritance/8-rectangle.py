@@ -1,33 +1,37 @@
 #!/usr/bin/python3
 
-""" Rectangle module
+'''
 
-"""
+    Implementing a Geometry class
 
-base_class = __import__('7-base_geometry').BaseGeometry
-
-
+'''
 
 
 
-class Rectangle(base_class):
-
-    """ Subclass of BaseGeometry class
-
-    """
 
 
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+
+
+
+
+class Rectangle(BaseGeometry):
+
+    '''
+
+        Implements a rectangle
+
+    '''
 
     def __init__(self, width, height):
 
-        """ Instantiation method
+        self.integer_validator("width", width)
 
-        """
+        self.integer_validator("height", height)
 
-        base_class.integer_validator(self, "width", width)
 
-        base_class.integer_validator(self, "height", height)
 
         self.__width = width
 
-        self.__height = 
+        self.__height = height

@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-""" Attribute lookup module
+''' function that returns the list
 
-"""
+'''
 
 
 
@@ -10,14 +10,10 @@
 
 def lookup(obj):
 
-    """ Look up function
+    ''' function: lookup()
 
-        Args: object to look of attributes
+    Returns a list object
 
-        Return: list of attributes of that object
+    '''
 
-    """
-
-    if isinstance(obj, object):
-
-        return list(dir(obj))
+    return dir(obj)

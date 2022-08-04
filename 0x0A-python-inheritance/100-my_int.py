@@ -1,20 +1,27 @@
 #!/usr/bin/python3
 
-""" MyInt module
-"""
+"""Defines a class MyInt that inherits from int."""
+
+
+
+
 
 class MyInt(int):
-    """ int subclass 'MyInt'
-    """
 
-    def __eq__(self, other):
-        """ Equal to magic method for MyInt subclass
-        """
-        if type(other) in [int, float]:
-            return not other.__eq__(self)
+    """Invert int operators == and !=."""
 
-    def __ne__(self, other):
-        """ Not equal to magic method for MyInt subclass
-        """
-        if type(other) in [int, float]:
-            return not other.__ne__(self)
+
+
+    def __eq__(self, value):
+
+        """Override == opeartor with != behavior."""
+
+        return self.real != value
+
+
+
+    def __ne__(self, value):
+
+        """Override != operator with == behavior."""
+
+        return self.real == value
