@@ -160,4 +160,4 @@ class Base():
                 t.forward(squ.height)
                 t.left(90)
             t.penup()
-        t.Screen().exitonclick()
+        t.Screen().eixitonclick()
